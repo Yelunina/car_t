@@ -24,8 +24,12 @@ public class Main {
         for (int i = 0; i < cars.length; i++) {
             cars[i].drive();
         }
+        System.out.println("---------------test the second drive() call------");
+        cars[0].drive();
         System.out.println("-----------STOP---------------");
         for (int i = 0; i < cars.length; i++) {
+            cars[i].stop();
+            cars[i].drive();
             cars[i].stop();
         }
 
