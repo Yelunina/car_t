@@ -26,12 +26,37 @@ public class Main {
         }
         System.out.println("---------------test the second drive() call------");
         cars[0].drive();
+        cars[0].stop();
+        cars[0].drive();
+
+        System.out.println("++++++++++++++++++");
+        cars[0].stop();
+        cars[0].drive();
+        cars[0].ignition();
+
+        System.out.println("==========================");
+        cars[0].stop();
+        cars[0].ignition();
+        System.out.println(cars[0].toString());
+
         System.out.println("-----------STOP---------------");
         for (int i = 0; i < cars.length; i++) {
             cars[i].stop();
-            cars[i].drive();
-            cars[i].stop();
         }
 
+        //===============================Reference problem==============================
+        System.out.println("=================Reference problem================");
+        car1.stop();
+        carWithProblem.stop();
+
+        System.out.println(car1);
+        System.out.println(carWithProblem);
+
+        System.out.println(" car1 should start engine");
+        car1.ignition();
+        System.out.println();
+
+        System.out.println(car1);
+        System.out.println(carWithProblem);
     }
 }
