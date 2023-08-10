@@ -13,8 +13,11 @@ public class Car {
         this.licensePlate = licensePlate;
         this.registrationDate = registrationDate;
         this.engine = engine;
-        isDrive = false;
+        isDrive = false;//the state of car
 
+    }
+    public void ignition(){
+        engine.start();
     }
 
     public String toString() {
@@ -32,6 +35,10 @@ public class Car {
     }
 
     public void stop() {
+        if(!isDrive){
+            System.out.println("This car " + toString()+" STOP! You can't stop car twice");
+            return;
+        }
         engine.stop();
         isDrive = false;
         System.out.println("The Car " + toString() + " " + "STOP!!!");
