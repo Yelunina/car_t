@@ -21,7 +21,7 @@ public class Car {
     }
 
     public String toString() {
-        return color + " " + brand + " (" + licensePlate + " " + registrationDate.toString() + " )" + engine.toString();
+        return color + " " + brand + " (" + licensePlate + " " + registrationDate.toString() + " )" + engine.toString()+"Is Drive "+isDrive;
     }
 
     public void drive() {

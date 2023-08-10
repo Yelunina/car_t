@@ -9,7 +9,7 @@ public class Engine {
     }
 
     public String toString() {
-        return "Engane: " + type + " " + power;
+        return "Engane: " + type + " " + power + "Is Started" + isStarted;
     }
 
     public void start() {
