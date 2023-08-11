@@ -1,30 +1,30 @@
 public class Engine {
-    int power;
-    String type;
-    boolean isStarted = false;
+    private int power;
+    private String type;
 
-    public Engine(int power, String type) {
-        this.power = power;
-        this.type = type;
+    boolean isStarted=false;
+
+    public Engine(int power, String type){
+        this.power=power;
+        this.type=type;
     }
 
-    public String toString() {
-        return "Engane: " + type + " " + power + "Is Started" + isStarted;
+    public String toString(){
+        return "Engine: " + type + " " + power + " isStarted: "+isStarted;
     }
 
-    public void start() {
-        if (!isStarted){
-            isStarted=true;
+    public void start(){
+        if (!isStarted) {
+            isStarted = true;
             System.out.println("The engine is started");
         }
-
     }
 
-    public void stop() {
-        if (isStarted){
+    public void stop(){
+        if(isStarted) {
             isStarted=false;
             System.out.println("The engine is stop");
         }
-
     }
+
 }
